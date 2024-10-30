@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> MailChimp STS Plugin ReadMe.html </title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+
+<h1>MailChimp STS &mdash; API Setup Instructions</h1>
+
+<p>Before you can use this plugin, you'll need the following:</p>
+<ol>
+	<li>The API and Secret Access keys for an Amazon Web Services Account Simple Email Service<br />
+    You'll need the API and Secret Access keys from your AWS account so you can paste them into your MailChimp account.	</li>
+    <li>An API key for the MailChimp account you've integrated with Amazon Web Services.<br />
+	You'll need the API key for the MailChimp Account you've integrated with AWS so you can activate the WordPress plugin.	</li>
+    <li>MailChimp STS Plugin installed in WordPress and activated with a MailChimp API key<br />
+    You'll need to paste your MailChimp API key into the plugin to activate it.	</li>
+</ol>
+
+<p><strong>Note: </strong>Illustrations on this page have API key values blurred for security reasons.</p>
+
+<h2>Amazon Web Services</h2>
+<p>
+Amazon Web Services provides a number of server based solutions including Simple Email Services, which are used by MailChimp's STS. Go to <a href="http://aws.amazon.com/ses/" title="Amazon SES Sign Up">http://aws.amazon.com/ses/</a> and log into your account, or create a new one.</p>
+<div><p><img src="images/aws.png" alt="Amazon access keys" /> Click to manage your account, then click Security Credentials, then click Access Credentials. You will see a section of the page similar to the image to the right.</p>
+<p>Copy and paste both the Access Key ID and the Secret Access Key temporarily into a text file until you can paste them into your MailChimp account settings.</p>
+<p>Initially, your Amazon SES account will be put in Sandbox Mode. This means your account is in test mode, and cannot send email to any addresses not previously verified by Amazon. To have your account elevated to production mode, you will need to fill out the request form found on the Amazon SES page. MailChimp has no input over this part of the process. You must satisfy Amazon's criteria before you can switch on Production Mode.</p>
+</div>
+
+<h2>MailChimp</h2>
+<p>If you do not have account yet, you will need to go to <a href="http://www.mailchimp.com/signup/" title="MailChimp Sign Up">http://www.mailchimp.com/signup/</a> and sign up.</p>
+
+<p>Remember that MailChimp's Forever Free accounts do not support MailChimp STS. You will need a paid account.</p>
+<div><p><img src="images/mailchimpkey.png" alt="MailChimp integration" />From the menu at the top of the MailChimp page, expand Account, and click on Integrations. Scroll down to Amazon Simple Email Service and click. Here is where you paste your Amazon keys into the form shown at left.</p>
+<p>There is also a link (not shown) that links to Amazon's SES site that will explain SES capabilities and policies, and will let you fill in the request form for Production Mode.</p></div>
+<div>
+<p><img src="images/mailchimpapikey.png" alt="MailChimp API key" />From the menu at the top of the MailChimp page, expand Account again, and select API Keys &amp; Authorized Applications. Copy your MailChimp API Key to your Clipboard.</p>
+<p>There is also a link (not shown) that links to Amazon's SES site that will explain SES capabilities and policies, and will let you fill in the request form for Production Mode.</p></div>
+
+<h2>WordPress</h2>
+
+<p><img src="images/mcpplugin1.png" alt="Key input in plugin" />Log into your WordPress site and install the MailChimp STS plugin. Remember to activate it.</p>
+<p>Scroll down in the Admin Dashboard to Settings and click on MailChimp STS. You will see the dialog shown at right. Here is where you paste your MailChimp API key. Click Save Changes.</p>
+
+<div><p><img src="images/mcpplugin2.png" alt="Plugin settings" />Once you have plugged in your MailChimp API key, another section of the settings page becomes visible. Here you can check whether you want to track how many of your emails are opened, or clicked. You can see detailed results in your MailChimp account. There is also a visual report available in the Dashboard section at the top of the Admin page.</p>
+<p> Below the checkboxes, is a form field where you can enter email addresses that will be used to send emails using MailChimp STS. Remember to add the administrative email address WordPress uses to send emails.</p>
+<p>Once you have entered the sender email address(es) the plugin is installed and ready to test. Simply use the form at the bottom of the settings page to send test emails that you can recieve. (Remember if your Amazon account is in Sandbox Mode, you need to register addresses the system will let you send to.)</p></div>
+<p>When you recieve test emails, check the headers to see how the message was routed. If Amazon SES is listed as the sending server, the plugin is working perfectly.</p>
+</body>
+</html>

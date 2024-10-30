@@ -1,0 +1,60 @@
+/*MailChimp STS Readme*/
+BODY
+{
+	margin-top: 20px;
+}
+H1, H2, H3, H4, H5, H6
+{
+}
+H1
+{
+	text-align: center;
+	color: #9C0E0E;
+	font-weight: bold;
+	font-family: verdana, arial, sans-serif;
+	font-size: 19.9pt;
+}
+P
+{
+	font: normal 500 10pt Tahoma;
+	display: block;
+	padding-left: 6px;
+}
+A
+{
+}
+A:hover, A:focus, A:active
+{
+}
+IMG
+{
+	padding: 6px;
+	float: left;
+	padding-top: 5px;
+	display: block;
+	clear: both;
+}
+H2
+{
+	padding-top: 48px;
+	clear: both;
+	font-family: verdana, arial, sans-serif;
+	color: #9C0E0E;
+	font-size: 14.8pt;
+	font-weight: bold;
+}
+HR
+{
+	clear: both;
+	color: #1422AC;
+}
+DIV
+{
+	display: block;
+	clear: both;
+}
+
+li {
+
+	margin-bottom: 10px;
+}
